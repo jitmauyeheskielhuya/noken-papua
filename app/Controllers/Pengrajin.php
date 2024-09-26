@@ -87,7 +87,7 @@ class Pengrajin extends BaseController
       session()->setFlashdata('errors', $validation->getErrors());
       return redirect()->to(base_url('produk/tambah'));
     } else {
-      $image->move(ROOTPATH . 'public/gambar_noken', $name);
+      $image->move(FCPATH . '/gambar_noken', $name);
       $this->ProdukModal->tambah_produk($data);
       session()->setFlashdata('success', 'Data Berhasil Ditambahkan');
       return redirect()->to(base_url('produk'));
@@ -123,7 +123,7 @@ class Pengrajin extends BaseController
     // rendom file
     if ($image->getName() != '') {
       $name = $image->getRandomName();
-      $image->move(ROOTPATH . 'public/gambar_noken', $name);
+      $image->move(FCPATH . '/gambar_noken', $name);
       $data['gambar_noken'] = $name;
     }
 
@@ -229,7 +229,7 @@ class Pengrajin extends BaseController
     ];
     $this->produkKriteriaModel->tambah_kriteria_produk($data);
     session()->setFlashdata('success', 'Data Berhasil Ditambahkan');
-    return redirect()->to(base_url('produk/kriteria_produk/' . $id));
+    return redirect()->to(base_url('/produk/tambah_kriteria_produk/' . $id));
   }
 
 

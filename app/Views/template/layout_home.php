@@ -124,7 +124,7 @@
             <!-- Disperindagkop -->
             <?php if (in_groups("disperindagkop")) : ?>
               <li class="">
-                <a href="http://localhost:8080/" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">Beranda</span></a>
+                <a href="/disperindagkop" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">Beranda</span></a>
               </li>
               <li class="">
                 <a href="<?= base_url('/laporan_produk') ?>" class="text-emerald-400 hover:text-emerald-500 bg-none py-2 hover:bg-gradient-to-r from-emerald-200 to-sky-200 rounded-md shadow-md mb-3 mt-2 bg-emerald-50 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fas fa-holly-berry"></i> <span class="">L Data Produk</span></a>

@@ -51,7 +51,7 @@ class Disperindagkop extends BaseController
   {
     $data['produks'] = $this->produk->getAll();
 
-    return view('disperindagkop/laporan_d_produk/index', $data);
+    return view('disperindagkop/Laporan_d_produk/index', $data);
   }
 
   public function laporan_ikm()

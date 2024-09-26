@@ -486,8 +486,13 @@ class Pelanggan extends BaseController
 
     //max & min value
     for ($i = 0; $i < count($grades); $i++) {
-      $max[] = max(array_column($dataset, $i));
-      $min[] = min(array_column($dataset, $i));
+      try {
+        $max[] = max(array_column($dataset, $i));
+        $min[] = min(array_column($dataset, $i));
+      } catch (\Throwable $th) {
+        $max[] = 0;
+        $min[] = 0;
+      }
     }
 
     for ($i = 0; $i < count($dataset); $i++) {

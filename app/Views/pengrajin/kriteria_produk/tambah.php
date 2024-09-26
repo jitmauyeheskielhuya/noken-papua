@@ -5,6 +5,11 @@
   <div class="content container-fluid">
     <h4 class="text-emerald-400 pb-3">Halaman Create Kriteria Produk</h4>
     <div class="">
+      <?php if (!empty(session()->getFlashdata('success'))) { ?>
+        <div class="col-3 alert alert-success">
+          <?= session()->getFlashdata('success'); ?>
+        </div>
+      <?php } ?>
       <div class="row">
         <div class="col-6 mx-60 ml-10 bg-slate-200 p-3 rounded-md pr-5">
           <form action="<?= base_url('produk/subkriteria_produk'); ?>" method="post">
@@ -29,7 +34,7 @@
               </button>
             </div>
             <div class="mt-6">
-              <a href="<?= base_url('/subkriteria') ?>" class="bg-emerald-500 px-2 py-2.5 rounded-md text hover:bg-emerald-400 text-slate-900 font-bold shadow-md hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fa fa-backward mr-1"></i>Kembali</a>
+              <a href="javascript:history.back()" class="bg-emerald-500 px-2 py-2.5 rounded-md text hover:bg-emerald-400 text-slate-900 font-bold shadow-md hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><i class="fa fa-backward mr-1"></i>Kembali</a>
             </div>
           </form>
         </div>
